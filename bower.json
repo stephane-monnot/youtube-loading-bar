@@ -10,9 +10,10 @@
     "./dist/css/youtubeLoadingBar.css",
     "./dist/css/youtubeLoadingBar.min.css"
   ],
-  "version": "1.0.0",
+  "version": "0.1.0",
   "keywords": [
-    "loading bar"
+    "loading",
+    "bar"
   ],
   "license": "CC BY-NC-SA 3.0",
   "dependencies": {
