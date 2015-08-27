@@ -1,0 +1,31 @@
+{
+  "name": "youtube-loading-bar",
+  "description": "Youtube loading bar",
+  "authors": [
+    "Stéphane Monnot <monnot.stephane@gmail.com>"
+  ],
+  "main": [
+    "./dist/js/youtubeLoadingBar.js",
+    "./dist/js/youtubeLoadingBar.min.js",
+    "./dist/css/youtubeLoadingBar.css",
+    "./dist/css/youtubeLoadingBar.min.css"
+  ],
+  "version": "1.0.0",
+  "keywords": [
+    "loading bar"
+  ],
+  "license": "CC BY-NC-SA 3.0",
+  "dependencies": {
+    "jquery": "~2.1.1"
+  },
+  "ignore": [
+    "bower_components",
+    "demo/",
+    "dist/js/lib/",
+    "**/.*",
+    "node_modules",
+    "test",
+    "tests"
+  ],
+  "homepage": "https://github.com/shinbuntu/youtube-loading-bar"
+}

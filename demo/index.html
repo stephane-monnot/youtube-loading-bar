@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8"/>
+    <title>Youtube Loading Bar</title>
+    <meta name="description" content=""/>
+    <meta name="keywords" lang="fr" content=""/>
+
+    <meta name="robots" content="index, follow, all"/>
+    <meta name="googlebot" content="index, follow, all"/>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+    <link href='//fonts.googleapis.com/css?family=RobotoDraft:regular,bold,italic,thin,light,bolditalic,black,medium&amp;lang=en'
+          rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/styles/default.min.css">
+    <script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/8.7/highlight.min.js"></script>
+
+    <link rel="stylesheet" href="./css/demo.css" type="text/css" media="screen"/>
+    <link rel="stylesheet" href="../dist/css/youtubeLoadingBar.min.css" type="text/css" media="screen"/>
+</head>
+
+<body class="" role="document" itemscope itemtype="http://schema.org/WebPage">
+
+<div class="container">
+    <h1>Youtube Loading Bar</h1>
+    <section>
+        <h3>Default</h3>
+
+        <div class="loading-example-1"></div>
+        <button onclick="$('.loading-example-1').loadingBar('start');setTimeout(function() {$('.loading-example-1').loadingBar('stop');}, 250)">
+            Play
+        </button>
+        <br>
+        <br>
+    <pre><code class="javascript">
+        // Init
+        $('.loading-example-1').loadingBar();
+
+        // Start
+        $('.loading-example-1').loadingBar('start');
+
+        setTimeout(function() {
+            // Stop
+            $('.loading-example-1').loadingBar('stop');
+        }, 250)
+    </code></pre>
+    </section>
+    <section>
+        <h3>Fixed</h3>
+
+        <div class="loading-example-2"></div>
+        <button onclick="$('.loading-example-2').loadingBar('start');setTimeout(function() {$('.loading-example-2').loadingBar('stop');}, 250)">
+            Play
+        </button>
+        <br>
+        <br>
+        <pre><code class="javascript">
+            // Init
+            $('.loading-example-2').loadingBar({fixed: true});
+
+            // Start
+            $('.loading-example-2').loadingBar('start');
+
+            setTimeout(function() {
+                // Stop
+                $('.loading-example-2').loadingBar('stop');
+            }, 250)
+        </code></pre>
+    </section>
+</div>
+
+<script src="../bower_components/jquery/dist/jquery.min.js" type="text/javascript"></script>
+
+<script src="../dist/js/youtubeLoadingBar.min.js" type="text/javascript"></script>
+
+<script>
+    $(function () {
+        $('.loading-example-1').loadingBar();
+        $('.loading-example-2').loadingBar({fixed: true});
+
+        $('pre code').each(function (i, block) {
+            hljs.highlightBlock(block);
+        });
+    });
+</script>
+</body>
+</html>
+

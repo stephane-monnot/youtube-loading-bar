@@ -1,0 +1,85 @@
+@import "compass/css3/border-radius";
+@import "compass/css3/transition";
+@import "compass/css3/animation";
+@import "compass/css3/box-shadow";
+
+$youtubeLoadingBarColor:#3f51b5 !default;
+
+.youtube-loadingbar-wrapper {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  height: 8px;
+}
+
+
+.youtube-loadingbar-wrapper.youtube-loadingbar-wrapper-fixed {
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.youtube-loadingbar {
+  position: absolute;
+  z-index: 2147483647;
+  top: 0;
+  left: -6px;
+  width: 1%;
+  height: 2px;
+  background: $youtubeLoadingBarColor;
+  @include border-radius(1px);
+  @include transition(all 500ms ease-in-out);
+}
+
+.youtube-loadingbar.waiting dd, .youtube-loadingbar.waiting dt {
+  @include animation(pulse 2s ease-out 0s infinite);
+}
+
+.youtube-loadingbar dt {
+  opacity: .6;
+  width: 180px;
+  right: -80px;
+  clip: rect(-6px,90px,14px,-6px);
+}
+
+.youtube-loadingbar dd {
+  opacity: .6;
+  width: 20px;
+  right: 0;
+  clip: rect(-6px,22px,14px,10px);
+}
+
+.youtube-loadingbar dd, .youtube-loadingbar dt {
+  position: absolute;
+  top: 0;
+  height: 2px;
+  @include box-shadow($youtubeLoadingBarColor 1px 0 4px 1px);
+  @include border-radius(100%);
+}
+
+@keyframes pulse {
+  30% { opacity:0.6; }
+  60% { opacity:0; }
+  100% { opacity:0.6; }
+}
+
+@-moz-keyframes pulse
+{
+  30% { opacity:0.6; }
+  60% { opacity:0; }
+  100% { opacity:0.6; }
+}
+
+@-ms-keyframes pulse
+{
+  30% { opacity:0.6; }
+  60% { opacity:0; }
+  100% { opacity:0.6; }
+}
+
+@-webkit-keyframes pulse
+{
+  30% { opacity:0.6; }
+  60% { opacity:0; }
+  100% { opacity:0.6; }
+}
